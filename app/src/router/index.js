@@ -1,15 +1,16 @@
 import React from 'react';
-import { BrowserRouter,Route} from 'react-router-dom';
-import Index from '../component/index/index';
-import SliderMenu from '../component/common/sliderMenu';
+import {Route} from 'react-router-dom';
+import Dash from '../component/dash/index';
+import User from '../component/user/index';
 
-const Routers =()=>{
-    return (
-        <BrowserRouter>
-            <Route path='/' component={SliderMenu}>
-               <Route path='/index' component={Index}/>
-            </Route>
-        </BrowserRouter>
-    );
+const Routers =()=> {
+ 
+        return (
+            <div>
+                <Route path='/dash' component={Dash}/>
+                <Route path='/user' component={User}/>
+            </div>
+              );
+    
 };
 export  default  Routers;

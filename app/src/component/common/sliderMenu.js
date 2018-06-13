@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import { Menu,Icon,Button } from  'antd';
+
 import { Link } from 'react-router-dom';
 import './sliderMenu.css';
 
@@ -14,14 +15,9 @@ export default class SliderMenu extends Component {
             collapsed:!this.state.collapsed
         });
     };
-
     render() {
         return (
-            <div style={{ width: 256 }}>
-        
-               <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-                    <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
-                </Button>
+            <div>
                 <Menu
                     defaultSelectedKeys={['1']}
                     defaultOpenKeys={['sub1']}
@@ -30,18 +26,17 @@ export default class SliderMenu extends Component {
                     inlineCollapsed={this.state.collapsed}
                 >
                     <Menu.Item key="1">
-                        <Button title={'index'} onClick={()=>{
-                            console.log(123455);
-                        }}>index</Button>
-                        <Link to="index">
+                        <Link to="/dash">
                             <Icon type="pie-chart" />
                             <span>Option 1</span>
                          </Link>
                          
                     </Menu.Item>
                     <Menu.Item key="2">
-                        <Icon type="desktop" />
-                        <span>Option 2</span>
+                        <Link to="/user">
+                            <Icon type="desktop" />
+                            <span>Option 2</span>
+                         </Link>
                     </Menu.Item>
                     <Menu.Item key="3">
                         <Icon type="inbox" />
