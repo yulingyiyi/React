@@ -1,12 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router,Route} from 'react-router-dom';
+import { BrowserRouter,Route} from 'react-router-dom';
 import Index from '../component/index/index';
+import SliderMenu from '../component/common/sliderMenu';
 
 const Routers =()=>{
     return (
-        <Router>
-            <Route path='/' component={Index}/>
-        </Router>
+        <BrowserRouter>
+            <Route path='/' component={SliderMenu}>
+               <Route path='/index' component={Index}/>
+            </Route>
+        </BrowserRouter>
     );
 };
 export  default  Routers;
