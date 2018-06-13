@@ -3,7 +3,7 @@ import { Table, Button } from 'antd';
 
 import './index.css';
 
-const columns = [{
+  const columns = [{
     title: 'Name',
     dataIndex: 'name',
   }, {
